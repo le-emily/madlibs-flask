@@ -1,8 +1,8 @@
-<html>
-<head>
-    <title>Enter Madlib Values</title>
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block title %} Enter Madlib Values {% endblock %}
+
+{% block content %}
     <form action="/madlib" method="POST"> 
         Person:
         <input type="text" name="person"><br>
@@ -27,5 +27,4 @@
 
         <input type="submit" value="Submit">
     </form>
-</body>
-</html>
+{% endblock %}

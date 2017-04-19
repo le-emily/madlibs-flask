@@ -63,6 +63,16 @@ def show_madlib():
     color = request.form.get("color")
     city = request.form.get("city")
 
+    if city == "San Francisco":
+        picture = "/static/sf.jpeg"
+    elif city == "New York":
+        picture = "/static/nyc.jpg"
+    elif city == "Chicago":
+        picture = "/static/chicago.jpg"
+    else:
+        picture = "/static/la.jpg"
+
+
     food_list = [request.form.get("ice-cream"), request.form.get("chocolate"),
                     request.form.get("cookies")]
 
@@ -76,8 +86,22 @@ def show_madlib():
     else:
         food_string = "nothing"
 
-    return render_template(choice(["madlib.html", "madlib2.html"]), city=city, noun=noun,
-        adjective=adjective, person=person, color=color, food_list=food_string)
+    if request.form.get("cookies"):
+        cookies = "/static/cookie.jpg"
+    else:
+        cookies = None
+    if request.form.get("chocolate"):
+        chocolate = "/static/choco.jpg"
+    else:
+        chocolate = None
+    if request.form.get("ice-cream"):
+        ice_cream = "/static/icecream.jpg"
+    else:
+        ice_cream = None
+
+
+    return render_template(choice(["madlib.html", "madlib2.html"]), cookies=cookies, chocolate=chocolate, ice_cream=ice_cream, picture=picture, 
+        city=city, noun=noun, adjective=adjective, person=person, color=color, food_list=food_string)
 
 
 if __name__ == '__main__':

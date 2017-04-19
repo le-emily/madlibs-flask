@@ -2,6 +2,21 @@
 {% block title %} Madlib-2 {% endblock %} 
 
 {% block content %}
-One day sitting in the Hackbright Lab, <span>{{ person }}</span> decided to go to the <span>{{ city }}</span>. Suddenly, he encountered a <span>{{ color }}</span> <span>{{ noun }}</span> in distress. When he tried to pick it up it burst into <span>{{ adjective }}</span> flames. <span>{{ person }}</span> was so hungry from all the excitement that they ate <span>{{ food_list }}</span>.
+
+<img src="{{ picture }}" alt="City View" style="width:304px;height:228px;"><br><br>
+
+<div>One day sitting in the Hackbright Lab, <span>{{ person }}</span> decided to go to <span>{{ city }}</span>. Suddenly, he encountered a <span>{{ color }}</span> <span>{{ noun }}</span> in distress. When he tried to pick it up it burst into <span>{{ adjective }}</span> flames. <span>{{ person }}</span> was so hungry from all the excitement that they ate <span>{{ food_list }}</span>.</div>
+
+{% if {{ cookies }} %}
+<img src="{{ cookies }}">
+{% endif %}
+
+{% if {{ chocolate }} %}
+<img src="{{ chocolate }}">
+{% endif %}
+
+{% if {{ ice_cream }} %}
+<img src="{{ ice_cream }}">
+{% endif %}
 
 {% endblock %}
