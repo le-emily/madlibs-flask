@@ -1,0 +1,31 @@
+<html>
+<head>
+    <title>Enter Madlib Values</title>
+</head>
+<body>
+    <form action="/madlib" method="POST"> 
+        Person:
+        <input type="text" name="person"><br>
+        Color:
+        <input type="text" name="color"><br>
+        Adjective:
+        <input type="text" name="adjective"><br>
+        Noun:
+        <input type="text" name="noun"><br>
+        City:
+        <select name="city">
+            <option value="San Francisco">San Francisco</option>
+            <option value="Los Angeles">Los Angeles</option>
+            <option value="Chicago">Chicago</option>
+            <option value="New York">New York</option>
+        </select>
+        Foods:
+        <input type="checkbox" name="ice-cream" value="ice-cream">Ice-Cream</input>
+        <input type="checkbox" name="chocolate" value="chocolate">Chocolate</input>
+        <input type="checkbox" name="cookies" value="cookies">Cookies</input>
+
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
